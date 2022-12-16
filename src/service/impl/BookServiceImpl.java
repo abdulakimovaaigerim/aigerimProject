@@ -35,8 +35,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<Book> getBooksByGenre(String genre) {
-        books.stream().filter(x->x.getGenre().equals(genre)).findFirst();
-        return books.stream().filter(x->x.);
+        return books.stream().filter(x->x.getGenre().equals(genre)).toList();
     }
 
     @Override
